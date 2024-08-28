@@ -1,0 +1,49 @@
+@model karyawanApp.Models.AbsensiKaryawan
+@{
+    ViewData["Title"] = "AddAbsensi";
+}
+
+<div class="heading-text">
+    <h1>Absen</h1>
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AbsensiGet"> <-- Back</a>
+</div>
+
+<div class="container">
+    <form action="AddAbsensi" method="post">
+        <div class="section-form">
+            <div class="form-group">
+                <label asp-for="KodeKaryawan" class="control-label"></label>
+                <input asp-for="KodeKaryawan" class="form-control" />
+                <span asp-validation-for="KodeKaryawan" class="text-danger"></span>
+            </div>
+            <div class="form-group ">
+                <label asp-for="NamaKaryawan" class="control-label"></label>
+                <input asp-for="NamaKaryawan" class="form-control" />
+                <span asp-validation-for="NamaKaryawan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TglMasuk" class="control-label"></label>
+                <input asp-for="TglMasuk" class="form-control" />
+                <span asp-validation-for="TglMasuk" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TglKeluar" class="control-label"></label>
+                <input asp-for="TglKeluar" class="form-control" />
+                <span asp-validation-for="TglKeluar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JamMasuk" class="control-label"></label>
+                <input asp-for="JamMasuk" class="form-control" />
+                <span asp-validation-for="JamMasuk" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JamKeluar" class="control-label"></label>
+                <input asp-for="JamKeluar" class="form-control" />
+                <span asp-validation-for="JamKeluar" class="text-danger"></span>
+            </div>
+            <div class="form-group ">
+                <input type="submit" value="Absen" class="btn btn-primary button-submit" />
+            </div>
+        </div>
+    </form>
+</div>
